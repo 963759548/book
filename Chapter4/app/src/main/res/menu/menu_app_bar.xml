@@ -1,0 +1,29 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto"
+      xmlns:tools="http://schemas.android.com/tools"
+      tools:context=".section6.AppBarActivity">
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="100"
+        android:title="@string/action_settings"
+        app:showAsAction="never"/>
+    <!--showAsAction表示显示的位置,
+    never表示不显示外层，
+    always永远显示在外面，
+    ifRoom表示空间允许显示出来,
+      withText 显示图标的时候同时显示菜单标题
+     -->
+    <!--orderInCategory显示优先级  orderInCategory值越大优先级越低  -->
+    <item
+        android:id="@+id/action_1"
+        android:orderInCategory="100"
+        android:title="按钮1"
+        android:icon="@mipmap/ic_launcher"
+        app:showAsAction="ifRoom|withText"/>
+    <item
+        android:id="@+id/action_2"
+        android:orderInCategory="100"
+        android:title="按钮2"
+        android:icon="@mipmap/ic_launcher"
+        app:showAsAction="always"/>
+</menu>

@@ -1,0 +1,38 @@
+apply plugin: 'com.android.application'//应用Android应用插件
+
+android {
+    compileSdkVersion 23  //编译SDK(Software Development Kit)的版本
+    buildToolsVersion "23.0.3" //构建工具的版本
+
+    defaultConfig {
+        applicationId "com.baidu.myapplication" //应用的唯一标示
+        minSdkVersion 14 //最低兼容的版本
+        targetSdkVersion 23 //目标版本兼容的版本
+        versionCode 1 //版本号,数字版本号
+        versionName "1.0" //字符串版本号
+    }
+    buildTypes {  //构建类型
+        debug {
+            buildConfigField "String", "API_URL", "\"http://test.baidu.com\""
+            buildConfigField "boolean", "LOG_CALLS", "true"
+            resValue "string", "str_name", "Example DEBUG"
+        }
+        release {
+            buildConfigField "String", "API_URL", "\"http://www.baidu.com\""
+            buildConfigField "boolean", "LOG_HTTP_CALLS", "false"
+            resValue "string", "str_name", "Example"
+            minifyEnabled false //是否混淆代码 false不混淆
+            // 混淆代码配置文件
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies { // 指明项目中依赖的第三方函数库
+    // 依赖程序中jar包
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    // 单元测试相关的
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:23.3.0'
+    compile 'com.github.orhanobut:logger:1.12'
+}

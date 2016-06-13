@@ -1,0 +1,22 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    repositories {  //关联的代码仓库
+        jcenter()
+    }
+    dependencies { //依赖gradle工具链
+        classpath 'com.android.tools.build:gradle:2.1.0'
+
+    }
+}
+
+allprojects {
+    repositories { //仓库地址
+        jcenter()
+        maven { url "https://jitpack.io" }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
