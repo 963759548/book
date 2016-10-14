@@ -24,6 +24,7 @@ dependencies {
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:24.2.0'
     compile 'com.tbruyelle.rxpermissions:rxpermissions:0.7.0@aar'
-    compile 'io.reactivex:rxjava:1.1.6'//需要引入RxJava
+    compile 'io.reactivex:rxjava:1.1.6'
+    //需要引入RxJava
     compile 'com.android.support:design:24.2.0'
 }

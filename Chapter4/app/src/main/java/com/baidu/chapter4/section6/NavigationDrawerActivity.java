@@ -46,6 +46,8 @@ public class NavigationDrawerActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
     }
+
+
     // 当按返回键的时候 如果抽屉打开先收回抽屉
     @Override
     public void onBackPressed() {

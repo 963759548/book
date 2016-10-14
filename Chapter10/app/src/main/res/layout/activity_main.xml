@@ -7,25 +7,31 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".notification.MainActivity">
+    tools:context=".MainActivity"
+    android:baselineAligned="false">
 
 
     <Button
+        android:onClick="click1"
+        android:text="发送有序广播"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="普通通知"
-        android:onClick="commonNotification"
-     />
+        android:id="@+id/button"
+        android:layout_weight="1" />
+
     <Button
+        android:onClick="click2"
+        android:text="发送无序广播"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="折叠通知"
-        android:onClick="foldNotification"
-        />
+        android:id="@+id/button2"
+        android:layout_weight="1" />
+
     <Button
+        android:text="发送本地广播"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="悬挂通知"
-        android:onClick="hangNotification"
-        />
+        android:id="@+id/localButton"
+        android:layout_weight="1" />
+
 </LinearLayout>
