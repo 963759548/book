@@ -12,7 +12,7 @@ android {
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         externalNativeBuild {
             cmake {
-                cppFlags ""
+                cppFlags ""  //如果使用C++11的标准,则使用cppFlags "-std=c++11"
             }
         }
     }
@@ -24,7 +24,7 @@ android {
     }
     externalNativeBuild {
         cmake {
-            path "CMakeLists.txt"
+            path "CMakeLists.txt" //配置文件路径
         }
     }
 }

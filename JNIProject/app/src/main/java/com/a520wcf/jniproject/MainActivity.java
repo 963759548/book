@@ -6,7 +6,7 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    // Used to load the 'native-lib' library on application startup.
+    // 加载函数库
     static {
         System.loadLibrary("native-lib");
     }
@@ -18,12 +18,12 @@ public class MainActivity extends AppCompatActivity {
 
         // Example of a call to a native method
         TextView tv = (TextView) findViewById(R.id.sample_text);
-        tv.setText(stringFromJNI());
+        tv.setText(stringFromJNI2());
     }
 
-    /**
-     * A native method that is implemented by the 'native-lib' native library,
-     * which is packaged with this application.
-     */
+    /**本地方法, 当前方法是通过C/C++代码实现*/
     public native String stringFromJNI();
+
+    //手动添加native方法
+    public native String stringFromJNI2();
 }
