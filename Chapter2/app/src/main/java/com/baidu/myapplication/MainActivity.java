@@ -15,10 +15,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         //设置界面显示的布局
         setContentView(R.layout.activity_main);
-        ImageView iv= (ImageView) findViewById(R.id.iv);
-        iv.setImageResource(R.mipmap.ic_launcher);
-
-
         String url=BuildConfig.API_URL;
         boolean log_calls=BuildConfig.LOG_CALLS;
         int stringid=R.string.str_name;

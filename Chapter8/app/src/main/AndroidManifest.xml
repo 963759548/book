@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest package="com.yll520wcf.chapter8"
-          xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.yll520wcf.chapter8">
 
     <application
         android:allowBackup="true"
@@ -15,17 +15,21 @@
             <!-- <category android:name="android.intent.category.LAUNCHER"/> -->
             <!-- </intent-filter> -->
         </activity>
-        <activity android:name=".section2.GridViewActivity">
-        </activity>
-        <activity android:name=".section3.RecyclerViewActivity">
-        </activity>
-        <activity android:name=".section4.CardViewActivity">
-        </activity>
+        <activity android:name=".section2.GridViewActivity"></activity>
+        <activity android:name=".section3.RecyclerViewActivity"></activity>
+        <activity android:name=".section4.CardViewActivity"></activity>
         <activity android:name=".section5.ViewPagerActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.MAIN" />-->
 
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <!--<category android:name="android.intent.category.LAUNCHER" />-->
+            <!--</intent-filter>-->
+        </activity>
+        <activity android:name=".section6.BottomNavigationViewActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
     </application>

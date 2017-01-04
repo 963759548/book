@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/call"
+        android:icon="@android:drawable/ic_menu_call"
+        android:title="call" />
+    <item
+        android:id="@+id/message"
+        android:icon="@android:drawable/ic_dialog_email"
+        android:title="message" />
+    <item
+        android:id="@+id/search"
+        android:icon="@android:drawable/ic_menu_search"
+        android:title="搜索" />
+
+    <item
+        android:id="@+id/delete"
+        android:icon="@android:drawable/ic_menu_delete"
+        android:title="删除"/>
+</menu>
