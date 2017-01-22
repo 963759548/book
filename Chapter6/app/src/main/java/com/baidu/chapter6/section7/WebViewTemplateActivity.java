@@ -1,4 +1,4 @@
-package com.baidu.chapter6.section6;
+package com.baidu.chapter6.section7;
 
 import android.content.Context;
 import android.content.Intent;
@@ -13,7 +13,6 @@ import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
-import android.widget.TextView;
 
 import com.baidu.chapter6.R;
 import com.daimajia.numberprogressbar.NumberProgressBar;

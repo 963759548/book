@@ -1,6 +1,5 @@
 package com.baidu.chapter6;
 
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;

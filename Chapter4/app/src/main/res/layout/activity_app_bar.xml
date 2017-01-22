@@ -10,17 +10,16 @@
         android:layout_height="?attr/actionBarSize"
         android:background="?attr/colorPrimary"
         >
-        <!--&lt;!&ndash;gravity 文字在控件中居中-->
-            <!--layout_gravity  控件在父容器的位置-->
-        <!--&ndash;&gt;-->
-        <!--<TextView-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:gravity="center"-->
-            <!--android:layout_gravity="center"-->
-            <!--android:layout_centerInParent="true"-->
-            <!--android:text="我是标题"-->
-            <!--android:textSize="20sp"/>-->
+        <!--gravity 文字在控件中居中-->
+        <!--layout_gravity  控件在父容器的位置-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_centerInParent="true"
+            android:text="我是标题"
+            android:textSize="20sp"/>
 
     </android.support.v7.widget.Toolbar>
     

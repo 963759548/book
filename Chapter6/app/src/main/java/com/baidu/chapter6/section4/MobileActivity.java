@@ -66,14 +66,12 @@ public class MobileActivity extends AppCompatActivity implements View.OnClickLis
             public void run() {
                 HttpURLConnection conn = null;
                 try {
-                    String url="http://apis.baidu.com/showapi_open_bus/mobile/find";
+                    String url="http://apis.juhe.cn/mobile/get";
                     String num = editText.getText().toString().trim();
-                    url=url+"?num="+num;
+                    url=url+"?phone="+num+"&key=e6d7409002af0588ba8679910833659f";
                     // 利用string url构建URL对象
                     URL mURL = new URL(url);
                     conn = (HttpURLConnection) mURL.openConnection();
-                    //设置请求头
-                    conn.setRequestProperty("apikey",  "9dc7ab2f8993b0b215ad8c550e1f4ebe");
                     conn.setRequestMethod("GET");
                     conn.setReadTimeout(5000);
                     conn.setConnectTimeout(10000);
@@ -81,7 +79,7 @@ public class MobileActivity extends AppCompatActivity implements View.OnClickLis
                     int responseCode = conn.getResponseCode();
                     if (responseCode == 200) {
                         InputStream is = conn.getInputStream();
-                        String response = getStringFromInputStream(is);
+                         String response = getStringFromInputStream(is);
                         Log.i("MobileActivity",response);
                         //解析JSON
                         final String address=parJson(response);
@@ -108,13 +106,13 @@ public class MobileActivity extends AppCompatActivity implements View.OnClickLis
     private String parJson(String response) {
         Gson gson=new Gson();
         Bean bean=gson.fromJson(response, Bean.class);
-        // 如果错误码为0返回号码归属地
-        if(bean.getShowapi_res_code()==0) {
-            Bean.ShowapiResBodyEntity body = bean.getShowapi_res_body();
+        // 如果结果码为200返回号码归属地
+        if("200".equals(bean.getResultcode())) {
+            Bean.ResultBean body = bean.getResult();
             StringBuilder sb=new StringBuilder();
             //如果省份不为空 地址拼装省份
-            if(!TextUtils.isEmpty(body.getProv())){
-                sb.append(body.getProv());
+            if(!TextUtils.isEmpty(body.getProvince())){
+                sb.append(body.getProvince());
             }
             // 城市
             if(!TextUtils.isEmpty(body.getCity())){
@@ -123,8 +121,8 @@ public class MobileActivity extends AppCompatActivity implements View.OnClickLis
 
             return sb.toString();
         }else{
-          // 错误码不为0 返回错误信息
-            return bean.getShowapi_res_error();
+          // 状态码不为200 返回错误信息
+            return bean.getReason();
         }
     }
 

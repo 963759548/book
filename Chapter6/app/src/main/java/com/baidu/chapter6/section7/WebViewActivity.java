@@ -1,4 +1,4 @@
-package com.baidu.chapter6.section6;
+package com.baidu.chapter6.section7;
 
 import android.graphics.Bitmap;
 import android.net.http.SslError;

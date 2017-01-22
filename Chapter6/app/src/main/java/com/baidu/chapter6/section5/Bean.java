@@ -4,68 +4,62 @@ package com.baidu.chapter6.section5;
 public class Bean {
 
     /**
-     * showapi_res_code : 0
-     * showapi_res_error :
-     * showapi_res_body : {"areaCode":"0871","city":"昆明","name":"中国电信","num":1890871,"postCode":"650000","prov":"云南","provCode":"530000","ret_code":0,"type":2}
+     * resultcode : 200
+     * reason : Return Successd!
+     * result : {"province":"浙江","city":"杭州","areacode":"0571","zip":"310000","company":"中国移动","card":"移动动感地带卡"}
      */
 
-    private int showapi_res_code;
-    private String showapi_res_error;
-    /**
-     * areaCode : 0871
-     * city : 昆明
-     * name : 中国电信
-     * num : 1890871
-     * postCode : 650000
-     * prov : 云南
-     * provCode : 530000
-     * ret_code : 0
-     * type : 2
-     */
+    private String resultcode;
+    private String reason;
+    private ResultBean result;
 
-    private ShowapiResBodyEntity showapi_res_body;
-
-    public int getShowapi_res_code() {
-        return showapi_res_code;
+    public String getResultcode() {
+        return resultcode;
     }
 
-    public void setShowapi_res_code(int showapi_res_code) {
-        this.showapi_res_code = showapi_res_code;
+    public void setResultcode(String resultcode) {
+        this.resultcode = resultcode;
     }
 
-    public String getShowapi_res_error() {
-        return showapi_res_error;
+    public String getReason() {
+        return reason;
     }
 
-    public void setShowapi_res_error(String showapi_res_error) {
-        this.showapi_res_error = showapi_res_error;
+    public void setReason(String reason) {
+        this.reason = reason;
     }
 
-    public ShowapiResBodyEntity getShowapi_res_body() {
-        return showapi_res_body;
+    public ResultBean getResult() {
+        return result;
     }
 
-    public void setShowapi_res_body(ShowapiResBodyEntity showapi_res_body) {
-        this.showapi_res_body = showapi_res_body;
+    public void setResult(ResultBean result) {
+        this.result = result;
     }
 
-    public static class ShowapiResBodyEntity {
-        private String areaCode;
+    public static class ResultBean {
+        /**
+         * province : 浙江
+         * city : 杭州
+         * areacode : 0571
+         * zip : 310000
+         * company : 中国移动
+         * card : 移动动感地带卡
+         */
+
+        private String province;
         private String city;
-        private String name;
-        private int num;
-        private String postCode;
-        private String prov;
-        private String provCode;
-        private int ret_code;
-        private int type;
+        private String areacode;
+        private String zip;
+        private String company;
+        private String card;
 
-        public String getAreaCode() {
-            return areaCode;
+        public String getProvince() {
+            return province;
         }
 
-        public void setAreaCode(String areaCode) {
-            this.areaCode = areaCode;
+        public void setProvince(String province) {
+            this.province = province;
         }
 
         public String getCity() {
@@ -76,60 +70,36 @@ public class Bean {
             this.city = city;
         }
 
-        public String getName() {
-            return name;
+        public String getAreacode() {
+            return areacode;
         }
 
-        public void setName(String name) {
-            this.name = name;
+        public void setAreacode(String areacode) {
+            this.areacode = areacode;
         }
 
-        public int getNum() {
-            return num;
+        public String getZip() {
+            return zip;
         }
 
-        public void setNum(int num) {
-            this.num = num;
+        public void setZip(String zip) {
+            this.zip = zip;
         }
 
-        public String getPostCode() {
-            return postCode;
+        public String getCompany() {
+            return company;
         }
 
-        public void setPostCode(String postCode) {
-            this.postCode = postCode;
+        public void setCompany(String company) {
+            this.company = company;
         }
 
-        public String getProv() {
-            return prov;
+        public String getCard() {
+            return card;
         }
 
-        public void setProv(String prov) {
-            this.prov = prov;
-        }
-
-        public String getProvCode() {
-            return provCode;
-        }
-
-        public void setProvCode(String provCode) {
-            this.provCode = provCode;
-        }
-
-        public int getRet_code() {
-            return ret_code;
-        }
-
-        public void setRet_code(int ret_code) {
-            this.ret_code = ret_code;
-        }
-
-        public int getType() {
-            return type;
-        }
-
-        public void setType(int type) {
-            this.type = type;
+        public void setCard(String card) {
+            this.card = card;
         }
     }
 }

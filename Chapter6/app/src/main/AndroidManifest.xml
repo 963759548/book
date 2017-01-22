@@ -37,12 +37,12 @@
         </activity>
         <activity android:name=".section4.MobileActivity">
 
-            <!-- <intent-filter> -->
-            <!-- <action android:name="android.intent.action.MAIN" /> -->
+             <!--<intent-filter>-->
+             <!--<action android:name="android.intent.action.MAIN" />-->
 
 
-            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
-            <!-- </intent-filter> -->
+             <!--<category android:name="android.intent.category.LAUNCHER" />-->
+             <!--</intent-filter>-->
         </activity>
         i
         <activity android:name=".section5.ParserJsonActivity">
@@ -63,16 +63,26 @@
             <!-- <category android:name="android.intent.category.LAUNCHER"/> -->
             <!-- </intent-filter> -->
         </activity>
-        <activity android:name=".section6.WebViewActivity">
+        <activity android:name=".section6.MobileByRetrofitActivity">
+             <intent-filter>
+             <action android:name="android.intent.action.MAIN"/>
+
+
+             <category android:name="android.intent.category.LAUNCHER"/>
+             </intent-filter>
+        </activity>
+
+        <activity android:name=".section7.WebViewActivity">
 
         </activity>
-        <activity android:name=".section6.WebViewTemplateActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+        <activity android:name=".section7.WebViewTemplateActivity">
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.MAIN" />-->
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+                <!--<category android:name="android.intent.category.LAUNCHER" />-->
+            <!--</intent-filter>-->
         </activity>
+
     </application>
 
 </manifest>

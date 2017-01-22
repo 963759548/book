@@ -1,5 +1,6 @@
 package com.demo.myapplication;
 
+import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.support.v7.app.AlertDialog;
@@ -49,8 +50,9 @@ public class DialogDemoActivity extends AppCompatActivity {
                 dialog.dismiss();
             }
         });
-        builder.create();       //创建对话框
-        builder.show();         //显示对话框
+        // 下面两行代码 可以合成一行 builder.show()
+        Dialog dialog=builder.create();       //创建对话框
+        dialog.show();         //显示对话框
     }
 
     //列表对话框
