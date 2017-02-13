@@ -1,5 +1,6 @@
 package com.yll520wcf.chapter8.section3;
 
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
@@ -16,6 +17,8 @@ import java.util.List;
 
 public class RecyclerViewActivity extends AppCompatActivity {
     List<String> datas=new ArrayList<>();
+    SwipeRefreshLayout swipeRefresh;
+    MyAdapter adapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,7 +37,7 @@ public class RecyclerViewActivity extends AppCompatActivity {
         //如果可以确定每个item的高度是固定的，设置这个选项可以提高性能
         recyclerView.setHasFixedSize(true);
         //创建并设置Adapter
-        final MyAdapter adapter = new MyAdapter(datas);
+        adapter = new MyAdapter(datas);
         recyclerView.setAdapter(adapter);
         adapter.setOnItemClickListener(new MyAdapter.OnRecyclerViewItemClickListener() {
             @Override
@@ -43,7 +46,39 @@ public class RecyclerViewActivity extends AppCompatActivity {
             }
         });
 
+        // 下拉刷新
+         swipeRefresh = (SwipeRefreshLayout) findViewById(R.id.swipe_refresh);
+        swipeRefresh.setColorSchemeResources(R.color.colorPrimary);//设置刷新进度条颜色
+        swipeRefresh.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                // 处理刷新逻辑
+               refresh();
+            }
+        });
+
     }
+    // 模拟了网络交互
+    private void refresh() {
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    Thread.sleep(2000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        adapter.notifyDataSetChanged();//通知数据变化
+                        swipeRefresh.setRefreshing(false);//停止刷新
+                    }
+                });
+            }
+        }).start();
+    }
+
     private void initDatas() {
         datas.add("阿尔巴尼亚");
         datas.add("安道尔");

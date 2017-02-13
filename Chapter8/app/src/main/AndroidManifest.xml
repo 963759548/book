@@ -9,28 +9,42 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".section1.ListViewActivity">
-
             <!-- <intent-filter> -->
             <!-- <action android:name="android.intent.action.MAIN"/> -->
             <!-- <category android:name="android.intent.category.LAUNCHER"/> -->
             <!-- </intent-filter> -->
         </activity>
-        <activity android:name=".section2.GridViewActivity"></activity>
-        <activity android:name=".section3.RecyclerViewActivity"></activity>
-        <activity android:name=".section4.CardViewActivity"></activity>
+        <activity android:name=".section2.GridViewActivity" />
+        <activity android:name=".section3.RecyclerViewActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".section4.CardViewActivity" />
         <activity android:name=".section5.ViewPagerActivity">
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
+        </activity>
+        <activity android:name=".section6.BottomNavigationViewActivity">
             <!--<intent-filter>-->
                 <!--<action android:name="android.intent.action.MAIN" />-->
 
                 <!--<category android:name="android.intent.category.LAUNCHER" />-->
             <!--</intent-filter>-->
         </activity>
-        <activity android:name=".section6.BottomNavigationViewActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+        <activity android:name=".section7.TabLayoutActivity">
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.MAIN" />-->
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+                <!--<category android:name="android.intent.category.LAUNCHER" />-->
+            <!--</intent-filter>-->
         </activity>
     </application>
 
