@@ -17,7 +17,7 @@ import com.yll520wcf.chapter9.R;
 public class SimpleFragment extends Fragment {
     private static final String ARG_SELECTION_NUM = "arg_selection_num";
     //在res/values/string.xml文件中 定义一些固定文本
-    private static final int[] TEXTS = {R.string.tiffany_text, R.string.taeyeon_text, R.string.yoona_text};
+    private static final int[] TEXTS = {R.string.wjk_text, R.string.wy_text, R.string.yyqx_text};
 
     TextView textView;
 

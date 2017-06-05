@@ -23,7 +23,7 @@ public class MainPagerAdapter extends FragmentPagerAdapter {
         super(fm);
     }
 
-    @Override 
+    @Override
     public Fragment getItem(int position) {
         if(position==0){
             return new ToutiaoFragment();

@@ -13,9 +13,9 @@ import com.yll520wcf.chapter9.R;
 public class SimpleAdapter extends FragmentPagerAdapter {
     //显示的内容
     private static final Section[] SECTIONS = {
-            new Section("Tiffany", R.drawable.tiffany),
-            new Section("Taeyeon", R.drawable.taeyeon),
-            new Section("Yoona", R.drawable.yoona)
+            new Section("王俊凯", R.drawable.wjk1),
+            new Section("王源", R.drawable.wy2),
+            new Section("易烊千玺", R.drawable.yyqx3)
     };
 
     public SimpleAdapter(FragmentManager fm) {

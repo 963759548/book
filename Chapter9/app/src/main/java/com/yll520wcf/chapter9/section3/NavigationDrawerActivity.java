@@ -54,7 +54,7 @@ public class NavigationDrawerActivity extends AppCompatActivity
         //tablayout关联ViewPager
         tabLayout.setupWithViewPager(viewPager);
 
-        setTitle("Girls' Generation");
+        setTitle("TFBoys");
     }
     //处理返回事件, 当抽屉打开先返回
     @Override
