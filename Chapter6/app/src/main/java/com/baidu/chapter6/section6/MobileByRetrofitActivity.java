@@ -3,6 +3,7 @@ package com.baidu.chapter6.section6;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -46,11 +47,13 @@ public class MobileByRetrofitActivity extends AppCompatActivity implements View.
                     @Override
                     public void call(Bean bean) {
                         //请求成功
+                        Log.d("Mobile","请求成功");
                     }
                 }, new Action1<Throwable>() {
                     @Override
                     public void call(Throwable throwable) {
                         //请求失败
+                        throwable.printStackTrace();
                     }
                 });
 
